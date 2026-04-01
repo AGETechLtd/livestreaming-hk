@@ -40,16 +40,20 @@
         }
         
         .ken-burns-image {
-            object-fit: cover;
-            object-position: center;
-            animation: kenburns 40s ease-in-out infinite alternate;
-            will-change: transform;
+        object-fit: cover;
+        object-position: center;
+        /* TUNED SPEED: Changed from 40s to 18s for more 'Live' energy */
+        animation: kenburns 18s ease-in-out infinite alternate;
+        will-change: transform;
+    }
+    
+    @keyframes kenburns {
+        0% { transform: scale(1) translate(0%, 0%); }
+        100% { 
+            /* Increased the zoom and movement slightly to match the speed */
+            transform: scale(1.18) translate(-3%, -2%); 
         }
-        
-        @keyframes kenburns {
-            0% { transform: scale(1) translate(0%, 0%); }
-            100% { transform: scale(1.15) translate(-2%, -1%); }
-        }
+    }
 
         /* Adds a subtle drop shadow to text to ensure it pops off the background image */
         .text-shadow-lg {
