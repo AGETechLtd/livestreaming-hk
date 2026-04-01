@@ -26,52 +26,36 @@
     </script>
     
     <style>
-    /* Pulse for 'Live' icon */
-    .pulse-red {
-        animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0.7); }
-        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 4, 72, 0); }
-        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0); }
-    }
-
-    /* BULLETPROOF KEN BURNS */
-    .ken-burns-container {
-        position: relative;
-        overflow: hidden; /* This acts as the 'window' */
-        width: 100%;
-        height: 100%;
-    }
-
-    .ken-burns-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 110%; /* Force it to be slightly wider than the screen */
-        height: 110%; /* Force it to be slightly taller than the screen */
-        object-fit: cover;
-        transform-origin: center;
-        /* Increased speed slightly to 20s so you can actually see it moving */
-        animation: kenburns 20s linear infinite alternate;
-        will-change: transform;
-        z-index: 0;
-    }
-
-    @keyframes kenburns {
-        0% {
-            transform: scale(1.0) translate(0, 0);
+        .pulse-red {
+            animation: pulse 2s infinite;
         }
-        100% {
-            /* Move it 5% and zoom 10% */
-            transform: scale(1.1) translate(-2%, -2%);
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 4, 72, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0); }
         }
-    }
+        
+        .ken-burns-container {
+            overflow: hidden;
+        }
+        
+        .ken-burns-image {
+            object-fit: cover;
+            object-position: center;
+            animation: kenburns 40s ease-in-out infinite alternate;
+            will-change: transform;
+        }
+        
+        @keyframes kenburns {
+            0% { transform: scale(1) translate(0%, 0%); }
+            100% { transform: scale(1.15) translate(-2%, -1%); }
+        }
 
-    .text-shadow-lg {
-        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    }
-</style>
+        /* Adds a subtle drop shadow to text to ensure it pops off the background image */
+        .text-shadow-lg {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased">
 
