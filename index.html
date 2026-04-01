@@ -1,74 +1,139 @@
-<section id="services" class="py-24 px-6 bg-white">
-    <div class="max-w-7xl mx-auto text-center mb-20">
-        <h2 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter text-black">
-            MISSION-CRITICAL <span class="text-brandRed italic text-6xl md:text-8xl">BROADCAST</span>
-        </h2>
-        <p class="text-2xl text-gray-600 max-w-3xl mx-auto font-medium">
-            In Hong Kong, there are no second takes. We solve the complexity of urban interference and high-stakes connectivity.
-        </p>
-    </div>
+<!DOCTYPE html>
+<html lang="en-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Professional Live Streaming HK | Corporate Events & Broadcasts | livestreaming.hk</title>
+    <meta name="description" content="Premier professional live streaming and broadcast services in Hong Kong. We specialize in multicam corporate events, AGMs, webinars, and hybrid conferences in Central, TST, Wan Chai, and across HK.">
+    
+    <meta name="geo.region" content="HK" />
+    <meta name="geo.placename" content="Hong Kong" />
+    <link rel="alternate" hreflang="en-hk" href="https://livestreaming.hk/" />
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brandRed: 'rgba(212, 4, 72, 1)', 
+              }
+            }
+          }
+        }
+    </script>
+    
+    <style>
+        .pulse-red {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 4, 72, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0); }
+        }
         
-        <div class="group bg-gray-50 p-10 rounded-[2rem] border border-gray-100 hover:bg-black transition-all duration-500 shadow-sm relative overflow-hidden">
-            <div class="relative z-10">
-                <div class="text-brandRed mb-6 font-black text-4xl">01</div>
-                <h3 class="text-3xl font-black mb-4 group-hover:text-white uppercase tracking-tighter">8-SIM LiveU Bonding</h3>
-                <p class="text-gray-600 group-hover:text-gray-300 text-lg leading-relaxed">
-                    Unbreakable outdoor signals. We aggregate 8 simultaneous SIM cards across CSL, SmarTone, and HKBN to bypass network congestion in dense HK urban canyons.
-                </p>
-            </div>
-            <div class="absolute -bottom-10 -right-10 text-brandRed/5 group-hover:text-brandRed/10 font-black text-9xl transition-all">SIM</div>
+        .ken-burns-container {
+            overflow: hidden;
+        }
+        
+        .ken-burns-image {
+        object-fit: cover;
+        object-position: center;
+        /* TUNED SPEED: Changed from 40s to 18s for more 'Live' energy */
+        animation: kenburns 18s ease-in-out infinite alternate;
+        will-change: transform;
+    }
+    
+    @keyframes kenburns {
+        0% { transform: scale(1) translate(0%, 0%); }
+        100% { 
+            /* Increased the zoom and movement slightly to match the speed */
+            transform: scale(1.18) translate(-3%, -2%); 
+        }
+    }
+
+        /* Adds a subtle drop shadow to text to ensure it pops off the background image */
+        .text-shadow-lg {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+    <header class="border-b-2 border-brandRed py-4 px-6 sticky top-0 bg-white z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="/images/livestreaming-hk-logo.png" alt="LIVESTREAMING.HK" class="h-10 w-auto">
+            </a>
+            <nav class="hidden md:flex items-center space-x-10 font-extrabold text-sm uppercase tracking-widest text-black">
+                <a href="#services" class="hover:text-brandRed transition">Services</a>
+                <a href="#quote" class="bg-brandRed text-white px-5 py-3 rounded-full hover:bg-black transition">Request Quote</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="group bg-gray-50 p-10 rounded-[2rem] border border-gray-100 hover:bg-black transition-all duration-500 shadow-sm relative overflow-hidden">
-            <div class="relative z-10">
-                <div class="text-brandRed mb-6 font-black text-4xl">02</div>
-                <h3 class="text-3xl font-black mb-4 group-hover:text-white uppercase tracking-tighter">10+ Years Engineering</h3>
-                <p class="text-gray-600 group-hover:text-gray-300 text-lg leading-relaxed">
-                    Zero-downtime oversight. Our veteran network engineers monitor real-time bitrates and packet loss, ensuring a flawless stream even during tropical storm signals.
-                </p>
+    <section class="relative py-32 md:py-48 px-6 text-center ken-burns-container overflow-hidden border-b border-gray-100">
+        <img src="/images/hero-background.jpg" alt="Live Event Broadcast HK" class="ken-burns-image absolute inset-0 w-full h-full z-0">
+        
+        <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+
+        <div class="relative max-w-5xl mx-auto z-20 text-white text-shadow-lg">
+            <div class="inline-flex items-center space-x-2 mb-8 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-100 shadow-xl">
+                <span class="w-3.5 h-3.5 bg-brandRed rounded-full pulse-red"></span>
+                <span class="text-brandRed font-black text-xs uppercase tracking-wider">Live in Hong Kong</span>
             </div>
-            <div class="absolute -bottom-10 -right-10 text-brandRed/5 group-hover:text-brandRed/10 font-black text-9xl transition-all">10Y</div>
-        </div>
-
-        <div class="group bg-gray-50 p-10 rounded-[2rem] border border-gray-100 hover:bg-black transition-all duration-500 shadow-sm relative overflow-hidden">
-            <div class="relative z-10">
-                <div class="text-brandRed mb-6 font-black text-4xl">03</div>
-                <h3 class="text-3xl font-black mb-4 group-hover:text-white uppercase tracking-tighter">Full AVL Powerhouse</h3>
-                <p class="text-gray-600 group-hover:text-gray-300 text-lg leading-relaxed">
-                    Beyond the lens. We manage integrated lighting, sound reinforcement for echo-prone halls, and seamless run-of-show coordination for VIP guests.
-                </p>
+            <h1 class="text-7xl md:text-9xl font-black mb-10 leading-tight tracking-tighter text-white">WE BROADCAST<br><span class="text-white underline decoration-brandRed decoration-8 underline-offset-8">YOUR VISION.</span></h1>
+            <p class="text-3xl text-white max-w-3xl mx-auto mb-16 font-bold">Premium, reliable 4K live streaming services for corporate events and conferences across HK.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="#quote" class="bg-brandRed text-white px-14 py-6 rounded-full font-extrabold text-2xl hover:bg-black transition-all shadow-2xl">Start My Stream</a>
+                <a href="#services" class="bg-white/10 backdrop-blur-md border-2 border-white text-white px-14 py-6 rounded-full font-extrabold text-2xl hover:bg-white hover:text-black transition-all">View Services</a>
             </div>
-            <div class="absolute -bottom-10 -right-10 text-brandRed/5 group-hover:text-brandRed/10 font-black text-9xl transition-all">AVL</div>
         </div>
+    </section>
 
-    </div>
-</section>
-
-<section class="py-24 px-6 bg-black text-white">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-5xl font-black mb-8 leading-none uppercase italic">Battle-Tested in <br><span class="text-brandRed">Hong Kong</span></h2>
-                <div class="space-y-8">
-                    <div class="border-l-4 border-brandRed pl-6">
-                        <h4 class="font-bold text-xl uppercase text-brandRed">Outdoor Festivals</h4>
-                        <p class="text-gray-400">Challenge: Zero fixed fiber & high RF interference. Solution: Bonded cellular with 99.9% uptime.</p>
-                    </div>
-                    <div class="border-l-4 border-gray-700 pl-6">
-                        <h4 class="font-bold text-xl uppercase">Corporate Galas</h4>
-                        <p class="text-gray-400">Challenge: Complex dim lighting & remote speakers. Solution: Pro-grade switchers & low-latency encoding.</p>
-                    </div>
-                    <div class="border-l-4 border-gray-700 pl-6">
-                        <h4 class="font-bold text-xl uppercase">Hybrid Seminars</h4>
-                        <p class="text-gray-400">Challenge: Interaction lag for virtual guests. Solution: 10-year veteran engineering oversight.</p>
-                    </div>
+    <section id="services" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black mb-16 text-center uppercase tracking-tighter text-black">Professional HK Broadcast Services</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-gray-50 p-10 rounded-3xl shadow-sm border-b-8 border-brandRed group transition-all hover:bg-black hover:text-white">
+                    <h3 class="font-extrabold text-2xl mb-5 text-black group-hover:text-white">Corporate Events</h3>
+                    <p class="mt-4 text-lg text-gray-600 group-hover:text-gray-300">We provide multicam broadcast setups for AGMs, townhalls, and luxury product launches in Central and TST.</p>
+                </div>
+                <div class="bg-gray-50 p-10 rounded-3xl shadow-sm border-b-8 border-brandRed group transition-all hover:bg-black hover:text-white">
+                    <h3 class="font-extrabold text-2xl mb-5 text-black group-hover:text-white">Hybrid Conferences</h3>
+                    <p class="mt-4 text-lg text-gray-600 group-hover:text-gray-300">Seamless integration of Zoom/Teams with physical HK venues, featuring professional audio and internet bonding.</p>
+                </div>
+                <div class="bg-gray-50 p-10 rounded-3xl shadow-sm border-b-8 border-brandRed group transition-all hover:bg-black hover:text-white">
+                    <h3 class="font-extrabold text-2xl mb-5 text-black group-hover:text-white">Technical Crew</h3>
+                    <p class="mt-4 text-lg text-gray-600 group-hover:text-gray-300">Our native HK technical crew handles lighting, sound engineering, and stream management for flawless execution.</p>
                 </div>
             </div>
-            <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-                <img src="/images/service-showcase.jpg" alt="Professional Streaming Setup HK" class="w-full h-full object-cover">
-            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="quote" class="py-24 px-6 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-5xl font-black mb-4 text-center uppercase italic tracking-tighter text-black">Get Your <span class="text-brandRed text-6xl italic font-black mb-2 text-center uppercase">Quote</span></h2>
+            <p class="text-center text-xl text-gray-600 mb-12">Native HK support response within 2 hours.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST" class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 space-y-8">
+                <input type="text" name="name" placeholder="Contact Person / Company" required class="w-full border-b-2 border-gray-300 focus:border-brandRed outline-none py-3 text-lg bg-white">
+                <input type="email" name="email" placeholder="Email Address" required class="w-full border-b-2 border-gray-300 focus:border-brandRed outline-none py-3 text-lg bg-white">
+                <textarea name="message" placeholder="Briefly describe your live streaming needs..." required class="w-full border-b-2 border-gray-300 focus:border-brandRed outline-none py-3 text-lg bg-white h-40"></textarea>
+                <button type="submit" class="w-full bg-brandRed text-white font-extrabold py-5 uppercase tracking-tighter text-2xl hover:bg-black rounded-full transition-all">Transmit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-16 px-6 text-center text-sm">
+        <div class="max-w-7xl mx-auto">
+            <p class="font-extrabold mb-4 uppercase tracking-wider text-white">LIVESTREAMING<span class="text-brandRed">.HK</span></p>
+            <p class="text-gray-400">&copy; 2026 LIVESTREAMING.HK | Professional Broadcast Group HK</p>
+        </div>
+    </footer>
+
+</body>
+</html>
