@@ -103,62 +103,52 @@
     </section>
 
     <section id="quote" class="py-24 px-6 bg-gray-50 border-t border-gray-100">
-        <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase italic tracking-tighter text-black">SECURE YOUR <span class="text-brandRed">BROADCAST</span></h2>
-                <p class="text-xl text-gray-600 font-medium italic">Professional engineering response within 2 hours.</p>
-            </div>
-            
-            <form id="broadcastForm" class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100">
-                <div class="grid md:grid-cols-2 gap-8 mb-10">
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-black">Full Name *</label>
-                        <input type="text" name="name" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black transition-all">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-black">Company Name *</label>
-                        <input type="text" name="company" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black transition-all">
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 mb-10">
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-black">Email *</label>
-                        <input type="email" name="email" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black transition-all">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-black">Phone *</label>
-                        <input type="tel" name="phone" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black transition-all">
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8 mb-10 p-6 bg-gray-50 rounded-3xl border border-gray-200">
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-black">Target Platform</label>
-                        <input type="text" name="platform" placeholder="YouTube, Zoom, FB, etc." class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-2 text-black bg-transparent">
-                    </div>
-                    <div class="flex flex-col justify-center space-y-4">
-                        <label class="flex items-center space-x-3 cursor-pointer group">
-                            <input type="checkbox" name="video_capture" value="Yes" class="w-5 h-5 accent-brandRed">
-                            <span class="text-sm font-bold uppercase text-black group-hover:text-brandRed transition">Video Capture</span>
-                        </label>
-                        <label class="flex items-center space-x-3 cursor-pointer group">
-                            <input type="checkbox" name="audio_capture" value="Yes" class="w-5 h-5 accent-brandRed">
-                            <span class="text-sm font-bold uppercase text-black group-hover:text-brandRed transition">Audio Capture</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="space-y-2 mb-10">
-                    <label class="text-xs font-bold uppercase tracking-widest text-black">Mission Briefing</label>
-                    <textarea name="message" placeholder="Venue location, event date, and specific requirements..." class="w-full border-2 border-gray-100 focus:border-brandRed rounded-2xl p-5 h-44 outline-none text-black transition-all"></textarea>
-                </div>
-
-                <button type="submit" id="submitBtn" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl rounded-full transition-all shadow-xl active:scale-95">
-                    <span id="btnText">TRANSMIT ENQUIRY</span>
-                </button>
-            </form>
+    <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase italic tracking-tighter text-black">SECURE YOUR <span class="text-brandRed">BROADCAST</span></h2>
         </div>
-    </section>
+        
+        <form action="https://script.google.com/macros/s/AKfycbwyRJQ-2bKBIpwWzf8PEg0itGMQ1ocGsL47Z7KKp_Yfan86Zh4wfFm-zTznHyltjIId/exec" method="POST" class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100">
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+                <div class="space-y-2 text-left">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Full Name *</label>
+                    <input type="text" name="name" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black">
+                </div>
+                <div class="space-y-2 text-left">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Company Name *</label>
+                    <input type="text" name="company" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black">
+                </div>
+                <div class="space-y-2 text-left">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Email *</label>
+                    <input type="email" name="email" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black">
+                </div>
+                <div class="space-y-2 text-left">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Phone *</label>
+                    <input type="tel" name="phone" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-10 p-6 bg-gray-50 rounded-3xl border border-gray-200">
+                <div class="space-y-2 text-left">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Target Platform</label>
+                    <input type="text" name="platform" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-2 text-black bg-transparent">
+                </div>
+                <div class="flex flex-col justify-center space-y-4">
+                    <label class="flex items-center space-x-3 cursor-pointer"><input type="checkbox" name="video_capture" value="Yes" class="w-5 h-5 accent-brandRed"><span class="text-sm font-bold uppercase text-black">Video Capture</span></label>
+                    <label class="flex items-center space-x-3 cursor-pointer"><input type="checkbox" name="audio_capture" value="Yes" class="w-5 h-5 accent-brandRed"><span class="text-sm font-bold uppercase text-black">Audio Capture</span></label>
+                </div>
+            </div>
+
+            <div class="space-y-2 mb-10 text-left">
+                <label class="text-xs font-bold uppercase tracking-widest text-black">Mission Briefing</label>
+                <textarea name="message" class="w-full border-2 border-gray-100 focus:border-brandRed rounded-2xl p-5 h-44 outline-none text-black transition-all"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl rounded-full transition-all shadow-xl active:scale-95">TRANSMIT ENQUIRY</button>
+        </form>
+    </div>
+</section>
 
     <footer class="bg-black text-white py-16 px-6 text-center text-sm">
         <p class="font-extrabold mb-4 uppercase tracking-wider">LIVESTREAMING<span class="text-brandRed">.HK</span></p>
