@@ -1,44 +1,270 @@
-<section id="gear" class="py-24 px-6 bg-white overflow-hidden scroll-mt-20">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-            <div class="max-w-2xl text-left">
-                <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-brandRed mb-4">專業器材裝備</h2>
-                <p class="text-5xl md:text-7xl font-black text-black uppercase italic tracking-tighter leading-none">
-                    全面進入 <span class="text-gray-300">4K</span> 製作流程
-                </p>
-            </div>
-            <p class="text-gray-500 font-medium md:max-w-xs text-left mt-6 md:mt-0">
-                採用行業標準硬體與光學技術，為您構建高保真數字傳輸體驗。
-            </p>
-        </div>
-        </div>
-</section>
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>專業現場直播服務 HK | livestreaming.hk</title>
+    <meta name="description" content="香港領先的專業現場直播與廣播服務。專精於 8-SIM LiveU 網絡聚合技術、企業晚宴、混合型研討會及大型活動直播。">
+    <meta name="geo.region" content="HK" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brandRed: 'rgba(212, 4, 72, 1)', 
+              }
+            }
+          }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        .pulse-red { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 4, 72, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0); }
+        }
+        
+        .ken-burns-container { overflow: hidden; position: relative; width: 100%; height: 100%; }
+        .ken-burns-image {
+            object-fit: cover;
+            width: 115%; height: 115%;
+            position: absolute;
+            top: 0; left: 0;
+            animation: kenburns 20s ease-in-out infinite alternate;
+            will-change: transform;
+            z-index: 0;
+        }
+        @keyframes kenburns {
+            0% { transform: scale(1) translate(0%, 0%); }
+            100% { transform: scale(1.1) translate(-3%, -2%); }
+        }
+        
+        .text-shadow-lg { text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
 
-<section id="experience" class="py-24 px-6 bg-gray-50 border-y border-gray-200 scroll-mt-20">
-    <div class="max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-16 items-center">
-            <div class="md:col-span-1 text-left">
-                <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-brandRed mb-4">專業直播團隊</h2>
-                <p class="text-5xl font-black text-black uppercase italic tracking-tighter leading-none mb-6">
-                    數十載 <span class="text-gray-300">現場</span> 執導經驗
+    <header class="border-b-2 border-brandRed py-4 px-6 sticky top-0 bg-white z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="zh.html"><img src="/images/livestreaming-hk-logo.png" alt="LIVESTREAMING.HK" class="h-10 w-auto"></a>
+            
+            <nav class="hidden md:flex items-center space-x-8 font-extrabold text-[10px] uppercase tracking-[0.2em] text-black">
+                <a href="#gear" class="hover:text-brandRed transition">器材裝備</a>
+                <a href="#experience" class="hover:text-brandRed transition">專業團隊</a>
+                <a href="#services" class="hover:text-brandRed transition">服務範疇</a>
+                
+                <a href="index.html" class="flex items-center space-x-2 border-l pl-6 border-gray-200 hover:text-brandRed transition group font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-12 transition-transform"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span>EN</span>
+                </a>
+
+                <a href="#quote" class="bg-brandRed text-white px-5 py-3 rounded-full hover:bg-black transition shadow-lg tracking-widest">立即查詢</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative py-32 md:py-48 px-6 text-center ken-burns-container overflow-hidden border-b border-gray-100">
+        <img src="/images/hero-background.jpg" alt="Live Event Broadcast HK" class="ken-burns-image">
+        <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+        
+        <div class="relative max-w-5xl mx-auto z-20 text-white text-shadow-lg px-6 text-left">
+            <div class="inline-flex items-center space-x-2 mb-8 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full border border-gray-100 shadow-xl">
+                <span class="w-3.5 h-3.5 bg-brandRed rounded-full pulse-red"></span>
+                <span class="text-brandRed font-black text-xs uppercase tracking-wider font-bold">香港現場直播</span>
+            </div>
+            <h1 class="text-7xl md:text-9xl font-black mb-10 leading-tight tracking-tighter uppercase italic">專業直播<br><span class="underline decoration-brandRed decoration-8 underline-offset-8">呈現您的視覺理想</span></h1>
+            <a href="#quote" class="inline-block bg-brandRed text-white px-14 py-6 rounded-full font-extrabold text-2xl hover:bg-black transition-all shadow-2xl uppercase tracking-widest italic">開始直播企劃</a>
+        </div>
+    </section>
+
+    <section id="gear" class="py-24 px-6 bg-white overflow-hidden scroll-mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="max-w-2xl text-left">
+                    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-brandRed mb-4 font-bold">硬體實力</h2>
+                    <p class="text-5xl md:text-7xl font-black text-black uppercase italic tracking-tighter leading-none">
+                        全面進入 <span class="text-gray-300">4K</span> 製作流程
+                    </p>
+                </div>
+                <p class="text-gray-500 font-medium md:max-w-xs text-left mt-6 md:mt-0 font-bold">
+                    採用行業標準硬體與光學技術，為您構建高保真數字傳輸體驗。
                 </p>
             </div>
-            <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
-                <div class="flex space-x-6">
-                    <div class="text-brandRed font-black text-6xl opacity-20 italic">15+</div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-left">
+                <div class="col-span-2 bg-gray-100 p-8 rounded-[2rem] flex flex-col justify-end min-h-[300px] group hover:bg-black transition-all duration-500">
+                    <h4 class="text-black group-hover:text-brandRed font-black text-3xl uppercase italic mb-2">主控節點</h4>
+                    <p class="text-gray-600 group-hover:text-gray-400 text-sm font-bold uppercase tracking-widest">MacBook Pro M3 Max Nodes • vMix 4K Pro • Wirecast Gear</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-[2rem] flex flex-col justify-center items-center text-center">
+                    <div class="text-brandRed font-black text-5xl mb-2 italic">12G</div>
+                    <p class="text-white text-xs font-bold uppercase tracking-widest font-bold">SDI 基礎設施</p>
+                </div>
+                <div class="bg-brandRed p-8 rounded-[2rem] flex flex-col justify-center items-center text-center">
+                    <div class="text-white font-black text-5xl mb-2 italic">4K</div>
+                    <p class="text-white/80 text-xs font-bold uppercase tracking-widest font-bold">原生分辨率</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-[2rem]">
+                    <h4 class="text-black font-black text-xl uppercase mb-4 tracking-tighter italic">視覺捕捉</h4>
+                    <ul class="text-[10px] space-y-2 text-gray-500 font-bold uppercase tracking-widest">
+                        <li>Sony FX6 / FX9 Full Frame</li>
+                        <li>Canon CN-E Cine Glass</li>
+                        <li>Blackmagic URSA G2</li>
+                    </ul>
+                </div>
+                <div class="col-span-2 bg-gray-100 p-8 rounded-[2rem] flex items-center justify-between group hover:bg-gray-200 transition-all">
                     <div>
-                        <h4 class="text-black font-black text-xl uppercase tracking-tight">網絡架構專家</h4>
-                        <p class="text-gray-500 text-sm mt-2">8-SIM 網絡聚合技術專家，確保在香港複雜的射頻環境中訊號穩定不中斷。</p>
+                        <h4 class="text-black font-black text-3xl uppercase italic">訊號處理</h4>
+                        <p class="text-gray-500 text-xs font-bold uppercase tracking-widest mt-2 font-bold">ATEM Constellation 8K • Teradek Bolt 4K • LiveU Solo Pro</p>
                     </div>
                 </div>
-                <div class="flex space-x-6">
-                    <div class="text-brandRed font-black text-6xl opacity-20 italic">20+</div>
-                    <div>
-                        <h4 class="text-black font-black text-xl uppercase tracking-tight">資深導播</h4>
-                        <p class="text-gray-500 text-sm mt-2">曾執導國際峰會及頂級企業發布會，擁有從模擬到數碼時代的深厚背景。</p>
+                <div class="bg-gray-100 p-8 rounded-[2rem]">
+                    <h4 class="text-black font-black text-xl uppercase mb-4 tracking-tighter italic">現場氣氛</h4>
+                    <ul class="text-[10px] space-y-2 text-gray-500 font-bold uppercase tracking-widest">
+                        <li>MA Lighting Dot2 燈光控制</li>
+                        <li>D&B Audiotechnik 音響系統</li>
+                        <li>Sennheiser G4 數字無線麥克風</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6 bg-gray-50 border-y border-gray-200 scroll-mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-16 items-center">
+                <div class="md:col-span-1 text-left">
+                    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-brandRed mb-4 font-bold">專業菁英團隊</h2>
+                    <p class="text-5xl font-black text-black uppercase italic tracking-tighter leading-none mb-6">
+                        數十載 <span class="text-gray-300">現場</span> 執導經驗
+                    </p>
+                </div>
+                <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+                    <div class="flex space-x-6">
+                        <div class="text-brandRed font-black text-6xl opacity-20 italic">15+</div>
+                        <div>
+                            <h4 class="text-black font-black text-xl uppercase tracking-tight font-bold">網絡架構專家</h4>
+                            <p class="text-gray-500 text-sm mt-2 font-bold">8-SIM 網絡聚合技術 (Bonding) 專家，確保在香港複雜的射頻環境中訊號穩定不中斷。</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="text-brandRed font-black text-6xl opacity-20 italic">20+</div>
+                        <div>
+                            <h4 class="text-black font-black text-xl uppercase tracking-tight font-bold">資深導播</h4>
+                            <p class="text-gray-500 text-sm mt-2 font-bold">曾執導多項國際峰會、體育盛事及頂級企業發布會，擁有從模擬到全數碼時代的深厚技術背景。</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="text-brandRed font-black text-6xl opacity-20 italic">12+</div>
+                        <div>
+                            <h4 class="text-black font-black text-xl uppercase tracking-tight font-bold">專業攝影師</h4>
+                            <p class="text-gray-500 text-sm mt-2 font-bold">精通電影感畫面捕捉、穩定器操作及長焦體育賽事定位技術。</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <div class="text-brandRed font-black text-6xl opacity-20 italic">00</div>
+                        <div>
+                            <h4 class="text-black font-black text-xl uppercase tracking-tight font-bold">零故障紀錄</h4>
+                            <p class="text-gray-500 text-sm mt-2 font-bold">我們秉持技術冗餘 (Redundancy) 與「Show Must Go On」的信念，確保直播圓滿成功。</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="services" class="py-24 px-6 bg-black text-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl md:text-7xl font-black mb-6 uppercase italic tracking-tighter leading-none">實戰經驗 <span class="text-brandRed">品質保證</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 text-left text-lg">
+                <div class="border-t border-white/20 pt-8">
+                    <h3 class="text-brandRed font-black text-2xl mb-4 uppercase italic">01. 主題樂園慶典</h3>
+                    <p class="text-gray-400 font-bold">專為大型景點提供物流與技術支援。我們具備處理複雜射頻環境及多點同步直播的技術，適用於大型巡遊及公共活動。</p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <h3 class="text-brandRed font-black text-2xl mb-4 uppercase italic">02. 混合型研討會</h3>
+                    <p class="text-gray-400 font-bold">確保全球 VIP 與現場嘉賓之間的零延遲互動。透過廣播級編碼、網絡聚合及實時監控，消除地域隔閡。</p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <h3 class="text-brandRed font-black text-2xl mb-4 uppercase italic">03. 企業晚宴</h3>
+                    <p class="text-gray-400 font-bold">熟知五星級酒店物流流程。提供專業舞台燈光與高端 AV 整合，完美契合您的品牌形象與嘉賓期望。</p>
+                </div>
+                <div class="border-t border-white/20 pt-8">
+                    <h3 class="text-brandRed font-black text-2xl mb-4 uppercase italic">04. 周年晚宴</h3>
+                    <p class="text-gray-400 font-bold">提供全面活動管理，包括藝人聯絡、舞台流程指引及互動遊戲協調，確保晚宴流程順暢無阻。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="py-24 px-6 bg-gray-50 border-t border-gray-100 scroll-mt-20">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-5xl md:text-7xl font-black mb-16 uppercase italic tracking-tighter text-black">立即預約 <span class="text-brandRed">直播服務</span></h2>
+            
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thanks.html';}"></iframe>
+            
+            <form action="YOUR_SCRIPT_URL_HERE" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100 text-left">
+                <div class="grid md:grid-cols-2 gap-8 mb-10">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-black font-bold">全名 *</label>
+                        <input type="text" name="name" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black text-lg">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-black font-bold">公司名稱 *</label>
+                        <input type="text" name="company" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black text-lg">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-black font-bold">電郵地址 *</label>
+                        <input type="email" name="email" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black text-lg">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-black font-bold">聯絡電話 *</label>
+                        <input type="tel" name="phone" required class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-black text-lg">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-10 p-6 bg-gray-50 rounded-3xl border border-gray-200">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-black font-bold">目標平台</label>
+                        <input type="text" name="platform" placeholder="YouTube, Zoom, FB 等" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-2 text-black bg-transparent">
+                    </div>
+                    <div class="flex flex-col justify-center space-y-4">
+                        <label class="flex items-center space-x-3 cursor-pointer group">
+                            <input type="checkbox" name="video_capture" value="Yes" class="w-5 h-5 accent-brandRed">
+                            <span class="text-sm font-bold uppercase text-black group-hover:text-brandRed transition font-bold">需錄影服務</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer group">
+                            <input type="checkbox" name="audio_capture" value="Yes" class="w-5 h-5 accent-brandRed">
+                            <span class="text-sm font-bold uppercase text-black group-hover:text-brandRed transition font-bold">需音訊擷取</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="space-y-2 mb-10">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black font-bold">項目簡報 / 詳細需求</label>
+                    <textarea name="message" placeholder="活動場地、日期、特別技術要求..." class="w-full border-2 border-gray-100 focus:border-brandRed rounded-2xl p-5 h-44 outline-none text-black transition-all bg-transparent"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl rounded-full transition-all shadow-xl active:scale-95 italic">
+                    傳送查詢
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-16 px-6 text-center text-sm">
+        <p class="font-extrabold mb-4 uppercase tracking-wider italic text-lg">LIVESTREAMING<span class="text-brandRed">.HK</span></p>
+        <p class="text-gray-400">&copy; 2026 LIVESTREAMING.HK | 專業直播團隊 | 香港特別行政區</p>
+    </footer>
+
+</body>
+</html>
