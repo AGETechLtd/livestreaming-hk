@@ -4,6 +4,14 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow AI Search Bots
+User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
 # Block access to system files or temporary folders if you have them
 Disallow: /config/
 Disallow: /private/
