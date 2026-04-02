@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Transmitted | livestreaming.hk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brandRed: 'rgba(212, 4, 72, 1)', 
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        .pulse-red { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(212, 4, 72, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 4, 72, 0); }
+        }
+    </style>
+</head>
+<body class="bg-white h-screen flex flex-col items-center justify-center text-center px-6">
+
+    <div class="mb-8 relative">
+        <div class="w-24 h-24 bg-brandRed rounded-full flex items-center justify-center pulse-red">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
+    </div>
+
+    <h1 class="text-4xl md:text-6xl font-black text-black uppercase tracking-tighter mb-4 italic">
+        MISSION <span class="text-brandRed">RECEIVED</span>
+    </h1>
+    <p class="text-xl text-gray-600 max-w-md mb-12 font-medium">
+        Your enquiry has been successfully transmitted to our engineering team. We will review your briefing and respond within 2 hours.
+    </p>
+
+    <div class="text-gray-400 font-bold uppercase tracking-widest text-xs">
+        Redirecting to home in <span id="timer" class="text-brandRed text-lg">10</span> seconds...
+    </div>
+
+    <a href="index.html" class="mt-8 text-black font-black uppercase underline decoration-brandRed decoration-4 underline-offset-4 hover:text-brandRed transition-colors">
+        Return Now
+    </a>
+
+    <footer class="absolute bottom-10">
+        <p class="font-extrabold text-xs uppercase tracking-widest text-black">
+            LIVESTREAMING<span class="text-brandRed">.HK</span>
+        </p>
+    </footer>
+
+    <script>
+        let seconds = 10;
+        const display = document.getElementById('timer');
+        
+        const countdown = setInterval(() => {
+            seconds--;
+            display.innerText = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                window.location.href = "index.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
