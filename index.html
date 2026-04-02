@@ -177,22 +177,29 @@
         btn.style.opacity = '0.5';
         btnText.innerText = 'TRANSMITTING...';
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbybIMsca92US68RQEuoq0QTOSJ13MLzewj_1fy9EnI2k9bXi00xUyLu7mSstBoaCjQZ/exec';
-        
-       // Replace the fetch part in index.html with this:
-const formData = new FormData(form);
+        // 1. Convert form data to a simple object
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => { data[key] = value });
 
-fetch(scriptURL, {
-    method: 'POST',
-    body: formData,
-    mode: 'no-cors' // Do NOT add headers here; let the browser set them automatically
-})
-.then(() => {
-    window.location.href = 'thanks.html';
-})
-    
+        // 2. YOUR SCRIPT URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwFARMmz7vBEbYlT_usT5UP6oBIQ5UFUS624uRe7IzMP-zAYEbWWWC4rl7IoAx55cfT/exec';
+
+        // 3. Send as a POST request with the JSON body
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors', 
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(() => {
+            // Force the redirect
+            window.location.href = 'thanks.html';
+        })
         .catch(err => {
-            alert('Error: ' + err.message);
+            console.error('Fetch Error:', err);
+            alert('Transmission Error. Check connection.');
             btn.disabled = false;
             btn.style.opacity = '1';
             btnText.innerText = 'TRANSMIT ENQUIRY';
