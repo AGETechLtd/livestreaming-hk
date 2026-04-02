@@ -213,55 +213,55 @@
             </p>
         </div>
         
-        <form action="https://script.google.com/macros/s/AKfycbx_nGUzccDMbQE43D73eDKI8bp_AXqw5Hz794bxNggv_faFYms-NZJRRVkq7k3UwxFw/exec" method="POST" class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100">
+       <form action="https://script.google.com/macros/s/AKfycbx_nGUzccDMbQE43D73eDKI8bp_AXqw5Hz794bxNggv_faFYms-NZJRRVkq7k3UwxFw/exec" method="POST" class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100">
             
             <div class="grid md:grid-cols-2 gap-8 mb-10">
                 <div class="space-y-2">
-                    <label class="text-xs font-black uppercase tracking-widest text-gray-400">Full Name *</label>
-                    <input type="text" name="name" required placeholder="Contact Person" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg transition-colors bg-transparent">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Full Name *</label>
+                    <input type="text" name="name" required placeholder="Contact Person" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg text-black bg-transparent transition-colors">
                 </div>
                 <div class="space-y-2">
-                    <label class="text-xs font-black uppercase tracking-widest text-gray-400">Company Name *</label>
-                    <input type="text" name="company" required placeholder="Entity / Organization" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg transition-colors bg-transparent">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Company Name *</label>
+                    <input type="text" name="company" required placeholder="Entity / Organization" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg text-black bg-transparent transition-colors">
                 </div>
                 <div class="space-y-2">
-                    <label class="text-xs font-black uppercase tracking-widest text-gray-400">Email Address *</label>
-                    <input type="email" name="email" required placeholder="name@company.hk" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg transition-colors bg-transparent">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Email Address *</label>
+                    <input type="email" name="email" required placeholder="george@company.hk" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg text-black bg-transparent transition-colors">
                 </div>
                 <div class="space-y-2">
-                    <label class="text-xs font-black uppercase tracking-widest text-gray-400">Phone Number *</label>
-                    <input type="tel" name="phone" required placeholder="+852" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg transition-colors bg-transparent">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Phone Number *</label>
+                    <input type="tel" name="phone" required placeholder="+852" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-3 text-lg text-black bg-transparent transition-colors">
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 mb-10 p-6 bg-gray-50 rounded-2xl">
+            <div class="grid md:grid-cols-2 gap-8 mb-10 p-6 bg-gray-50 rounded-3xl border border-gray-200">
                 <div class="space-y-2">
-                    <label class="text-xs font-black uppercase tracking-widest text-gray-400">Target Platform</label>
-                    <input type="text" name="platform" placeholder="YouTube, Zoom, FB, Private Server" class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-2 text-md transition-colors bg-transparent">
+                    <label class="text-xs font-bold uppercase tracking-widest text-black">Target Platform</label>
+                    <input type="text" name="platform" placeholder="YouTube, Zoom, FB, etc." class="w-full border-b-2 border-gray-200 focus:border-brandRed outline-none py-2 text-md text-black bg-transparent transition-colors">
                 </div>
-                <div class="flex flex-col justify-center space-y-3">
+                <div class="flex flex-col justify-center space-y-4">
                     <label class="flex items-center space-x-3 cursor-pointer group">
-                        <input type="checkbox" name="video_capture" class="w-5 h-5 accent-brandRed">
-                        <span class="text-sm font-bold uppercase tracking-tight group-hover:text-brandRed transition">Video Capture Required</span>
+                        <input type="checkbox" name="video_capture" value="Yes" class="w-5 h-5 accent-brandRed border-gray-300 rounded">
+                        <span class="text-sm font-bold uppercase tracking-tight text-black group-hover:text-brandRed transition">Video Capture Required</span>
                     </label>
                     <label class="flex items-center space-x-3 cursor-pointer group">
-                        <input type="checkbox" name="audio_capture" class="w-5 h-5 accent-brandRed">
-                        <span class="text-sm font-bold uppercase tracking-tight group-hover:text-brandRed transition">Audio Capture Required</span>
+                        <input type="checkbox" name="audio_capture" value="Yes" class="w-5 h-5 accent-brandRed border-gray-300 rounded">
+                        <span class="text-sm font-bold uppercase tracking-tight text-black group-hover:text-brandRed transition">Audio Capture Required</span>
                     </label>
                 </div>
             </div>
 
             <div class="space-y-2 mb-10">
-                <label class="text-xs font-black uppercase tracking-widest text-gray-400">Project Mission Briefing</label>
-                <textarea name="message" placeholder="Tell us about the venue, date, and any specific artist or performer management needs..." class="w-full border-2 border-gray-100 focus:border-brandRed rounded-xl p-4 h-40 outline-none transition-all"></textarea>
+                <label class="text-xs font-bold uppercase tracking-widest text-black">Project Mission Briefing</label>
+                <textarea name="message" placeholder="Venue location, event date, and any artist management requirements..." class="w-full border-2 border-gray-100 focus:border-brandRed rounded-2xl p-5 h-44 outline-none text-black transition-all bg-transparent"></textarea>
             </div>
 
-            <button type="submit" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl hover:bg-black rounded-full transition-all shadow-xl active:scale-95">
+            <button type="submit" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl hover:bg-black rounded-full transition-all shadow-xl active:scale-95 transform">
                 TRANSMIT ENQUIRY
             </button>
             
-            <p class="text-center text-[10px] text-gray-400 mt-6 uppercase tracking-widest">
-                Encrypted & Secure Transmission | Professional Broadcast Group HK
+            <p class="text-center text-[10px] text-gray-500 mt-6 uppercase tracking-widest font-black">
+                End-to-End Encryption | Livestreaming.hk | Professional Broadcast Group
             </p>
         </form>
     </div>
