@@ -177,23 +177,20 @@
         btn.style.opacity = '0.5';
         btnText.innerText = 'TRANSMITTING...';
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxF6rG-esrNsiXLAXZGLaQiCkBbOcNawu3UZtGAZ4bgAEC2ULbmEj8rNZbDe2zDsSyD/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbybIMsca92US68RQEuoq0QTOSJ13MLzewj_1fy9EnI2k9bXi00xUyLu7mSstBoaCjQZ/exec';
         
-        // Using URLSearchParams ensures Google Script reads e.parameter correctly
-        const formData = new URLSearchParams(new FormData(form));
+       // Replace the fetch part in index.html with this:
+const formData = new FormData(form);
 
-        fetch(scriptURL, {
-            method: 'POST',
-            body: formData.toString(),
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
-            mode: 'no-cors' 
-        })
-        .then(() => {
-            // Redirect happens here
-            window.location.href = 'thanks.html';
-        })
+fetch(scriptURL, {
+    method: 'POST',
+    body: formData,
+    mode: 'no-cors' // Do NOT add headers here; let the browser set them automatically
+})
+.then(() => {
+    window.location.href = 'thanks.html';
+})
+    
         .catch(err => {
             alert('Error: ' + err.message);
             btn.disabled = false;
