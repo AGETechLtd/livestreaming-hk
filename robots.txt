@@ -1,0 +1,21 @@
+# robots.txt for livestreaming.hk
+# Updated: 2026-04-02
+
+User-agent: *
+Allow: /
+
+# Block access to system files or temporary folders if you have them
+Disallow: /config/
+Disallow: /private/
+Disallow: /temp/
+
+# Prevent crawlers from indexing your "Thanks" pages 
+# (You don't want these appearing in search results)
+Disallow: /thanks.html
+Disallow: /thanks-zh.html
+
+# Host identification
+Host: https://livestreaming.hk
+
+# Link to your XML sitemap for faster indexing
+Sitemap: https://livestreaming.hk/sitemap.xml
