@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Live Streaming HK | livestreaming.hk</title>
     <meta name="description" content="Premier professional live streaming and broadcast services in Hong Kong. Specializing in 8-SIM LiveU bonding, corporate galas, and hybrid seminars.">
-    
+    <script>
+    // Check if the user has already manually picked a language
+    if (!sessionStorage.getItem('lang_picked')) {
+        var userLang = navigator.language || navigator.userLanguage; 
+        // If the browser language is Traditional Chinese (HK or Taiwan)
+        if (userLang.includes('zh-HK') || userLang.includes('zh-TW') || userLang.includes('zh-MO')) {
+            window.location.href = "zh.html";
+        }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
