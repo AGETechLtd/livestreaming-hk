@@ -166,43 +166,42 @@
     </footer>
 
     <script>
-        const form = document.getElementById('broadcastForm');
-        const btn = document.getElementById('submitBtn');
-        const btnText = document.getElementById('btnText');
+    const form = document.getElementById('broadcastForm');
+    const btn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
 
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            
-            // UI Visual Feedback
-            btn.disabled = true;
-            btn.style.opacity = '0.7';
-            btn.style.cursor = 'not-allowed';
-            btnText.innerText = 'TRANSMITTING...';
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        btn.disabled = true;
+        btn.style.opacity = '0.5';
+        btnText.innerText = 'TRANSMITTING...';
 
-            const formData = new FormData(form);
-            
-            // REPLACE THIS URL with your actual Google Apps Script Web App URL
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbwnjuCvf6t0WGfAy0y_oyuotb3Vlb1cbdlLvsTpvviBqU8sv6mDmmbYLpRywHpFCbVa/exec';
+        const scriptURL = 'YOUR_NEW_DEPLOYMENT_URL_HERE';
+        
+        // Using URLSearchParams ensures Google Script reads e.parameter correctly
+        const formData = new URLSearchParams(new FormData(form));
 
-            fetch(scriptURL, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors' // Critical for Google Scripts to avoid CORS preflight issues
-            })
-            .then(() => {
-                // Success: Redirect to your branded thanks.html
-                window.location.href = 'thanks.html';
-            })
-            .catch(err => {
-                console.error('Error!', err.message);
-                alert('Transmission failed. Please check your connection or contact us directly.');
-                btn.disabled = false;
-                btn.style.opacity = '1';
-                btn.style.cursor = 'pointer';
-                btnText.innerText = 'TRANSMIT ENQUIRY';
-            });
+        fetch(scriptURL, {
+            method: 'POST',
+            body: formData.toString(),
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            mode: 'no-cors' 
+        })
+        .then(() => {
+            // Redirect happens here
+            window.location.href = 'thanks.html';
+        })
+        .catch(err => {
+            alert('Error: ' + err.message);
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btnText.innerText = 'TRANSMIT ENQUIRY';
         });
-    </script>
-
+    });
+</script>
+    
 </body>
 </html>
