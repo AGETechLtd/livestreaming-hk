@@ -361,7 +361,10 @@
                     <textarea name="message" placeholder="Venue details, dates, and artist management needs..." class="w-full border-2 border-gray-100 focus:border-brandRed rounded-2xl p-5 h-44 outline-none text-black transition-all bg-transparent"></textarea>
                 </div>
 
-                <button type="submit" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl rounded-full transition-all shadow-xl active:scale-95">
+                <!-- <button type="submit" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl rounded-full transition-all shadow-xl active:scale-95"> -->
+                <button type="submit" 
+        onclick="gtag('event', 'generate_lead', {'event_category': 'Contact Form', 'event_label': 'Broadcast Inquiry'});"
+        class="w-full bg-brandRed ...">
                     SUBMIT ENQUIRY
                 </button>
             </form>
