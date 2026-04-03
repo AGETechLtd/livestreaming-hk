@@ -371,8 +371,11 @@
                 <textarea name="message" placeholder="活動場地、日期、特別技術要求..." class="w-full border-2 border-gray-100 focus:border-brandRed rounded-2xl p-6 h-56 outline-none text-black text-xl transition-all bg-transparent"></textarea>
             </div>
 
-            <button type="submit" class="w-full bg-brandRed text-white font-black py-8 uppercase tracking-widest text-2xl rounded-full transition-all shadow-xl active:scale-95 italic">
-                傳送查詢
+            <!-- <button type="submit" class="w-full bg-brandRed text-white font-black py-6 uppercase tracking-widest text-2xl rounded-full transition-all shadow-xl active:scale-95"> -->
+            <button type="submit" 
+        onclick="gtag('event', 'generate_lead', {'event_category': 'Contact Form', 'event_label': 'Broadcast Inquiry'});"
+        class="w-full bg-brandRed ...">
+                    傳送查詢
             </button>
         </form>
     </div>
